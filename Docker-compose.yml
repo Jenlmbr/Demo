@@ -1,5 +1,0 @@
-version: "3"
-services:
-
-docker run -d -p 80:80 --name my-apache-php-app -v "$PWD":/var/www/html php:7.2-apache
-docker run -v /dir/on/host:/hostdir php sh -c "cp -rp /var/www/html/* /hostdir && exec myapp"
