@@ -1,0 +1,27 @@
+version: '3'
+
+networks:
+  backend:
+  frontend:
+
+services:
+  loadgen:
+    image: php:7.2-apache
+    volumes:
+      - ./loadgen:/var/www/html:ro
+    networks:
+      - backend
+    restart: always
+  rev_proxy:
+    image: nginx:latest
+    container_name: fe_gateway
+    volumes:
+      - ./rev_proxy/nginx.conf:/etc/nginx/nginx.conf:ro
+    ports:
+      - 80:80
+    networks:
+     - frontend 
+     - backend
+    restart: always
+    depends_on:
+      - loadgen
