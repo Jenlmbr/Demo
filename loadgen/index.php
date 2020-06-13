@@ -16,6 +16,8 @@
     <input type="submit" value="Get new values"/>
     <input type="reset" value="Reset"/>
   </form>
+  
+  <img src='docker.jpg' alt='Docker' />
 
   <br/>
   <p id="checking" style="display:none;">Loading <span id="attempt_counter"></span> numbers...</p>
