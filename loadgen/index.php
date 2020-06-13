@@ -17,7 +17,7 @@
     <input type="reset" value="Reset"/>
   </form>
   
-  <img src='docker.jpg' alt='Docker' />
+  
 
   <br/>
   <p id="checking" style="display:none;">Loading <span id="attempt_counter"></span> numbers...</p>
@@ -26,7 +26,9 @@
 
   <div id="results">
   </div>
-
+  
   <script src="js/script.js"></script>
+  
+  <img src='docker.jpg' alt='Docker' />
 </body>
 </html>
